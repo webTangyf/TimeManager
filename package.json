@@ -1,0 +1,35 @@
+{
+  "name": "time-manager",
+  "version": "0.0.1",
+  "description": "TimeManager",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server.js",
+    "dev": "rollup -c --watch",
+    "build": "rollup --config rollup.build.config.js",
+    "build:test": "rollup --config rollup.test.config.js",
+    "test": "jest"
+  },
+  "author": "tangyufeng",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.13.12",
+    "babel-preset-env": "^1.7.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^26.6.3",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "the-answer": "^1.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babelrc-rollup": "^3.0.0",
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}

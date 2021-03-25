@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="email=no" name="format-detection" />
+  <title>time-manager</title>
+  <script src="./index.umd.js"></script>
+  <style>
+    html {
+      height: 100vh;
+      background-color: aliceblue;
+    }
+    li {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h3>TimeManager</h3>
+  </div>
+  <script>
+    var timeManager = new TimeManager({
+      DEBUG: true
+    });
+    timeManager
+    .set(10)
+    .start({
+      stepCallBack: (params) => {
+        console.log('stepCallBack')
+        console.log(params)
+      },
+      endCallBack: (params) => {
+        console.log('endCallback')
+        console.log(params)
+      }
+    })
+  </script>
+</body>
+
+</html>
