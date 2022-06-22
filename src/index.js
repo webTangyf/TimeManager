@@ -45,7 +45,7 @@ const _getStorage = function () {
  * @returns {Number} 剩余的间隔时间
  */
 const _getLastGap = function () {
-  return parseInt((this._storage_.targetTimestamp - new Date().getTime()) / this._opt_.STEP)
+  return Math.ceil((this._storage_.targetTimestamp - new Date().getTime()) / this._opt_.STEP)
 }
 
 /**

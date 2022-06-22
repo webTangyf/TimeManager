@@ -24,6 +24,7 @@
     <h3>TimeManager</h3>
   </div>
   <script>
+    var i = 0
     var timeManager = new TimeManager({
       DEBUG: true
     });
@@ -31,12 +32,14 @@
     .set(10)
     .start({
       stepCallBack: (params) => {
+        console.log(++i)
+        console.log(new Date().getTime())
         console.log('stepCallBack')
-        console.log(params)
       },
       endCallBack: (params) => {
+        console.log(++i)
+        console.log(new Date().getTime())
         console.log('endCallback')
-        console.log(params)
       }
     })
   </script>
